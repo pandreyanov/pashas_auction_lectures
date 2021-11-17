@@ -65,7 +65,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#intro-scoring" class="md-skip">
+        <a href="#scoring-auctions" class="md-skip">
           Skip to content
         </a>
       
@@ -231,6 +231,8 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
+        
+      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Scoring Auctions
@@ -247,6 +249,8 @@
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
   
+  
+    
   
   
     <label class="md-nav__title" for="__toc">
@@ -355,6 +359,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -453,11 +459,8 @@
                   </a>
                 
                 
-                  <h1>Scoring Auctions</h1>
-                
-                <div class="highlight"><pre><span></span><code><span class="c1"># Scoring Auctions</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code><span class="o">%</span><span class="n">run</span> <span class="o">../</span><span class="n">publish</span><span class="o">.</span><span class="n">py</span>
+                <h1 id="scoring-auctions">Scoring Auctions</h1>
+<div class="highlight"><pre><span></span><code><span class="o">%</span><span class="n">run</span> <span class="n">publish</span><span class="o">.</span><span class="n">py</span>
 </code></pre></div>
 <h2 id="intro-scoring">Intro Scoring</h2>
 <p>This chapter studies models devoted to <strong>scoring auctions</strong>, that is, auctions where both price and quality matter. Quality is an abstraction and can take multiple forms such as: experience, preference, social impact, green tech... the nature of it could be different. What matters is that the auctioneer values certain non-monetary outcomes of the auction.</p>
@@ -553,10 +556,8 @@
 <h3 id="nature-of-quality">Nature of quality</h3>
 <p>The quality characteristics can be of different nature. For example, some of them could be completely <strong>exogenous</strong>, like the number of years firm has been operating on the market. These are ojective characteristics of the firm and can not be changed. An example of <strong>endogenous</strong> quality is when the firm submits the number of days needed to complete a certain construction project. The firm has complete freedom to claim any number of days: 30, 100, 300... but her associated costs would probably be higher as well. It is not always possible to say with complete certainty whether quality is exogenous or endogenous.</p>
 <p>Another problem is that quality is not always completely objective and therefore is subject to <strong>manipulation</strong> (i.e. corruption), see, for example, <a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/huang19.pdf">An empirical study of scoring auctions and quality manipulation corruption, EER, 2019</a>. When the risk of manipulation is low, it is possible to not commit to any particular evaluation criteria, or announce the criteria afted the proposals were submitted, so that the buyer has the last word. When the risk of manipulation is high, it makes more sense to commit to  strict and standardized evaluation criteria.</p>
-<div class="admonition quote">
-<p class="admonition-title">Read from Handbook of Procurement</p>
-<p>Detailed ex-ante specifications increase the predictability of procurement competition, minimizing risks of discretionary behaviour and abuses of the evaluating committee (e.g., corruption). This comes at the cost of losing some flexibility. Therefore, the buyer should carefully evaluate and compare case by case costs and benefits of both flexibility and predictability. When corruption is not a particular concern and participants can offer different valuable solutions for the good or service to be procured, it is more likely that benefits from flexibility prevail. In this case, there can be much to gain from ex-post evaluation. In contrast, if corruption during the evaluation process is a concern, ex-post flexibility should be minimized either by adopting an ex-ante BME (automatic scoring) or, in case this were not possible, by reducing the weight given to technical attributes.</p>
-</div>
+<details class="quote"><summary>Read from Handbook of Procurement</summary><p>Detailed ex-ante specifications increase the predictability of procurement competition, minimizing risks of discretionary behaviour and abuses of the evaluating committee (e.g., corruption). This comes at the cost of losing some flexibility. Therefore, the buyer should carefully evaluate and compare case by case costs and benefits of both flexibility and predictability. When corruption is not a particular concern and participants can offer different valuable solutions for the good or service to be procured, it is more likely that benefits from flexibility prevail. In this case, there can be much to gain from ex-post evaluation. In contrast, if corruption during the evaluation process is a concern, ex-post flexibility should be minimized either by adopting an ex-ante BME (automatic scoring) or, in case this were not possible, by reducing the weight given to technical attributes.</p>
+</details>
 <p>Yet another problem is that certain quality characteristics and highly endogenous, but the associated costs are <strong>sunk costs</strong>, that is, they are incurred independently of the fact whether the firm wins the auction or not. Most of the time we would like the costs to be not sunk, that is, if the firm loses the auction, she can recover most of her investments. An exception is costs associated with mechanically filing the application. Since they do not vary across the firms, these are called <strong>entry costs</strong>.</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
@@ -574,15 +575,17 @@
 <h2 id="linear-score">Linear score</h2>
 <h3 id="a-simple-model">A simple model</h3>
 <p>We start with a simplest model where quality is exogenous.</p>
-<p>:::{admonition} Model
-:class: important
-- quality is exogenous and verifiable
-- there are <span class="arithmatex">\(n\)</span> ex-ante identical firms
-- each firm maximizes her expected utility <span class="arithmatex">\((b-c) \cdot P(win|b, q)\)</span>
-- there is a joint distribution of firms costs and quality <span class="arithmatex">\(F(c, q)\)</span>
-- the mechanism is a first-score auction
-- the score is linear <span class="arithmatex">\(s = \alpha q + (r - b)\)</span>
-:::</p>
+<div class="admonition warning">
+<p class="admonition-title">Model summary</p>
+<ul>
+<li>quality is exogenous and verifiable</li>
+<li>there are <span class="arithmatex">\(n\)</span> ex-ante identical firms</li>
+<li>each firm maximizes her expected utility <span class="arithmatex">\((b-c) \cdot P(win|b, q)\)</span></li>
+<li>there is a joint distribution of firms costs and quality <span class="arithmatex">\(F(c, q)\)</span></li>
+<li>the mechanism is a first-score auction</li>
+<li>the score is linear <span class="arithmatex">\(s = \alpha q + (r - b)\)</span></li>
+</ul>
+</div>
 <p>We wish to characterize a symmetric Bayes-Nash equilibrium, that is, our answer should be an equilibrium bidding strategy <span class="arithmatex">\(\beta(c, q)\)</span>.</p>
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
