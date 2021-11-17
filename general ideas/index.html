@@ -414,15 +414,15 @@ Scoring rules are defined up to a monotone transformation, so </p>
 <pre><code>+----+----------+---------+----------+-----------+--------+-----------+---------+
 |    |   q_year |   q_exp |   q_prop |   q_index |    bid |   reserve |   score |
 +====+==========+=========+==========+===========+========+===========+=========+
-|  0 |        4 |      77 |        6 |     0.449 | 416    |   2057.7  |    0.69 |
+|  0 |        4 |      20 |       72 |     0.428 | 273.39 |   1924.51 |    0.73 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  1 |        2 |      78 |        6 |     0.434 | 414.29 |   1772.61 |    0.67 |
+|  1 |        7 |      82 |       17 |     0.548 | 528.24 |   1154.85 |    0.54 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  2 |        3 |      17 |       85 |     0.455 | 794.82 |   1946.23 |    0.55 |
+|  2 |        8 |      50 |       52 |     0.538 | 528.66 |   1776.11 |    0.65 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  3 |        3 |      55 |       29 |     0.421 | 421.74 |   1443.2  |    0.62 |
+|  3 |        9 |      22 |       68 |     0.472 | 366.36 |   1238.63 |    0.63 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  4 |        6 |      19 |       58 |     0.387 | 391.29 |   2048.44 |    0.68 |
+|  4 |        1 |      24 |        4 |     0.146 | 100    |   1343.8  |    0.69 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
 </code></pre>
 <p>In the table above we have three underlying quality characteristics: <em>q_year</em> (years in the market), <em>q_exp</em> (experience), <em>q_prop</em> (proposition), that are weighted into a single quality index <em>q_index</em>. This index is then weighted against the discount, which is not present in the table explicitly. Note that you do not need to have access to all of the variables, some of them are clearly linearly dependent. Alternatively, you might not know the scoring rule, in which case you have to guess it from the data.</p>
