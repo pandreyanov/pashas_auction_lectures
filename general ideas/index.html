@@ -416,15 +416,15 @@
 <pre><code>+----+----------+---------+----------+-----------+--------+-----------+---------+
 |    |   q-year |   q-exp |   q-prop |   q-index |    bid |   reserve |   score |
 +====+==========+=========+==========+===========+========+===========+=========+
-|  0 |        8 |      69 |       88 |     0.777 | 900.08 |   1375.33 |    0.47 |
+|  0 |        6 |      50 |       36 |     0.454 | 493.12 |   1485.04 |    0.6  |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  1 |        9 |      47 |       65 |     0.585 | 580.15 |   1272.76 |    0.56 |
+|  1 |        7 |      56 |       70 |     0.63  | 713.12 |   1132.63 |    0.45 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  2 |        3 |      91 |       69 |     0.761 | 815.23 |   1938.97 |    0.63 |
+|  2 |        6 |      46 |       38 |     0.442 | 224.38 |   1351.26 |    0.72 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  3 |        9 |      32 |       23 |     0.342 | 260.46 |   1986.45 |    0.71 |
+|  3 |        7 |      49 |       97 |     0.703 | 727.37 |   2004.78 |    0.66 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  4 |        2 |      99 |       47 |     0.703 | 633.05 |   1970.8  |    0.69 |
+|  4 |        7 |      65 |       76 |     0.699 | 604.9  |   2037.08 |    0.7  |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
 </code></pre>
 <p>In the table above we have three underlying quality characteristics: <em>q_year</em> (years in the market), <em>q_exp</em> (experience), <em>q_prop</em> (proposition), that are weighted into a single quality index <em>q_index</em>. This index is then weighted against the discount, which is not present in the table explicitly. Note that you do not need to have access to all of the variables, some of them are clearly linearly dependent. Alternatively, you might not know the scoring rule, in which case you have to guess it from the data.</p>
@@ -442,7 +442,7 @@
 <p>It is natural to expect that quality and discount should be negatively correlated as higher quality is associated with higher costs. However, in practice, the correlation can be actually positive due to strategic reasons (non-monotonicity of monopoly price in demand).</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
-<p>The theory of <strong>interdependent scoring rules</strong> is virtually non-existent, yet they are quite popular in practice. Russian Federation and Italy have been experimenting a lot with complex auction rules, including scoring.</p>
+<p>The theory of <strong>interdependent scoring rules</strong> is very difficult.</p>
 </div>
 <h2 id="nature-of-quality">Nature of quality</h2>
 <p>The quality characteristics can be of different nature. For example, some of them could be completely <strong>exogenous</strong>, like the number of years firm has been operating on the market. These are ojective characteristics of the firm and can not be changed. An example of <strong>endogenous</strong> quality is when the firm submits the number of days needed to complete a certain construction project. The firm has complete freedom to claim any number of days: 30, 100, 300... but her associated costs would probably be higher as well. It is not always possible to say with complete certainty whether quality is exogenous or endogenous.</p>
