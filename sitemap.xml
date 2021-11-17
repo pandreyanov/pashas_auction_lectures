@@ -6,6 +6,16 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://pandreyanov.com/classic/</loc>
+         <lastmod>2021-11-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
+         <loc>https://pandreyanov.com/double/</loc>
+         <lastmod>2021-11-17</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://pandreyanov.com/scoring/</loc>
          <lastmod>2021-11-17</lastmod>
          <changefreq>daily</changefreq>
