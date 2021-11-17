@@ -1,78 +1,339 @@
+
 <!DOCTYPE html>
 
-<html lang="en">
+<html class="no-js" lang="en">
 <head>
 <meta charset="utf-8"/>
-<meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-<title>Scoring Auctions - Graduate Lectures in Microeconomics</title>
-<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-<meta content="mkdocs-1.2.3, mkdocs-gitbook-1.0.7" name="generator"/>
+<meta content="width=device-width,initial-scale=1" name="viewport"/>
 <meta content="Pasha Andreyanov" name="author"/>
-<link href="../images/favicon.ico" rel="shortcut icon" type="image/x-icon"/>
-<meta content="true" name="HandheldFriendly">
-<meta content="width=device-width, initial-scale=1, user-scalable=no" name="viewport"/>
-<meta content="yes" name="apple-mobile-web-app-capable"/>
-<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
-<meta href="" rel="next">
-<link href="../css/style.min.css" rel="stylesheet"/>
-</meta></meta></head>
-<body>
-<div class="book">
-<div class="book-summary">
-<div id="book-search-input" role="search">
-<input placeholder="Type to search" type="text"/>
-</div> <!-- end of book-search-input -->
-<nav role="navigation">
-<ul class="summary">
-<li>
-<a class="custom-link" href=".." target="_blank">Graduate Lectures in Microeconomics</a>
-</li>
-<li class="divider"></li>
-<li class="chapter" data-path="">
-<a href="..">Home</a>
-<li class="header">Auctions</li>
-<li>
-<a class="" href="../classic/">Classic Auctions</a>
-</li>
-<li>
-<a class="" href="../double/">Double Auctions</a>
-</li>
-<li>
-<a class="active" href="./">Scoring Auctions</a>
-</li>
-<li class="divider"></li>
-<li>Copyright © 2021 - 2025 Pasha Andreyanov</li>
-<li><a href="http://www.mkdocs.org">
-Published with MkDocs
-</a></li>
-<li><a href="https://github.com/GitbookIO/theme-default">
-Theme by GitBook
-</a></li>
-</li></ul>
+<link href="https://pandreyanov.com/scoring/" rel="canonical"/>
+<link href="../assets/images/favicon.png" rel="icon"/>
+<meta content="mkdocs-1.2.3, mkdocs-material-7.3.6" name="generator"/>
+<title>Scoring Auctions - Graduate Lectures in Microeconomics</title>
+<link href="../assets/stylesheets/main.a57b2b03.min.css" rel="stylesheet"/>
+<link href="../assets/stylesheets/palette.3f5d1f46.min.css" rel="stylesheet"/>
+<meta content="#2094f3" name="theme-color"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css?family=IBM+Plex+Sans:300,400,400i,700%7CIBM+Plex+Mono&amp;display=fallback" rel="stylesheet"/>
+<style>:root{--md-text-font-family:"IBM Plex Sans";--md-code-font-family:"IBM Plex Mono"}</style>
+</head>
+<body data-md-color-accent="blue" data-md-color-primary="blue" data-md-color-scheme="default" dir="ltr">
+<script>function __prefix(e){return new URL("..",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+<input autocomplete="off" class="md-toggle" data-md-toggle="drawer" id="__drawer" type="checkbox"/>
+<input autocomplete="off" class="md-toggle" data-md-toggle="search" id="__search" type="checkbox"/>
+<label class="md-overlay" for="__drawer"></label>
+<div data-md-component="skip">
+<a class="md-skip" href="#scoring-auctions">
+          Skip to content
+        </a>
+</div>
+<div data-md-component="announce">
+</div>
+<header class="md-header" data-md-component="header">
+<nav aria-label="Header" class="md-header__inner md-grid">
+<a aria-label="Graduate Lectures in Microeconomics" class="md-header__button md-logo" data-md-component="logo" href=".." title="Graduate Lectures in Microeconomics">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+<label class="md-header__button md-icon" for="__drawer">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"></path></svg>
+</label>
+<div class="md-header__title" data-md-component="header-title">
+<div class="md-header__ellipsis">
+<div class="md-header__topic">
+<span class="md-ellipsis">
+            Graduate Lectures in Microeconomics
+          </span>
+</div>
+<div class="md-header__topic" data-md-component="header-topic">
+<span class="md-ellipsis">
+            
+              Scoring Auctions
+            
+          </span>
+</div>
+</div>
+</div>
+<label class="md-header__button md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+</label>
+<div class="md-search" data-md-component="search" role="dialog">
+<label class="md-search__overlay" for="__search"></label>
+<div class="md-search__inner" role="search">
+<form class="md-search__form" name="search">
+<input aria-label="Search" autocapitalize="off" autocomplete="off" autocorrect="off" class="md-search__input" data-md-component="search-query" name="query" placeholder="Search" required="" spellcheck="false" type="text"/>
+<label class="md-search__icon md-icon" for="__search">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"></path></svg>
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</label>
+<nav aria-label="Search" class="md-search__options">
+<button aria-label="Clear" class="md-search__icon md-icon" tabindex="-1" type="reset">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"></path></svg>
+</button>
 </nav>
-</div> <!-- end of book-summary -->
-<div class="book-body">
-<div class="body-inner">
-<div class="book-header" role="navigation">
-<!-- Title -->
-<h1><span class="enumerate-headings-plugin enumerate-heading-plugin">4.</span> 
-<i class="fa fa-circle-o-notch fa-spin"></i>
-<a href="."></a>
-</h1>
-</div> <!-- end of book-header -->
-<div class="page-wrapper" role="main" tabindex="-1">
-<div class="page-inner">
-<div id="book-search-results">
-<div class="search-noresults">
-<section class="normal markdown-section">
-<h1 id="scoring-auctions"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.</span> Scoring Auctions</h1>
+</form>
+<div class="md-search__output">
+<div class="md-search__scrollwrap" data-md-scrollfix="">
+<div class="md-search-result" data-md-component="search-result">
+<div class="md-search-result__meta">
+            Initializing search
+          </div>
+<ol class="md-search-result__list"></ol>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="md-header__source">
+<a class="md-source" data-md-component="source" href="https://github.com/pandreyanov/" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+</nav>
+</header>
+<div class="md-container" data-md-component="container">
+<nav aria-label="Tabs" class="md-tabs" data-md-component="tabs">
+<div class="md-tabs__inner md-grid">
+<ul class="md-tabs__list">
+<li class="md-tabs__item">
+<a class="md-tabs__link" href="..">
+        Home
+      </a>
+</li>
+<li class="md-tabs__item">
+<a class="md-tabs__link md-tabs__link--active" href="../classic/">
+        Auctions
+      </a>
+</li>
+</ul>
+</div>
+</nav>
+<main class="md-main" data-md-component="main">
+<div class="md-main__inner md-grid">
+<div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Navigation" class="md-nav md-nav--primary md-nav--lifted" data-md-level="0">
+<label class="md-nav__title" for="__drawer">
+<a aria-label="Graduate Lectures in Microeconomics" class="md-nav__button md-logo" data-md-component="logo" href=".." title="Graduate Lectures in Microeconomics">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54z"></path></svg>
+</a>
+    Graduate Lectures in Microeconomics
+  </label>
+<div class="md-nav__source">
+<a class="md-source" data-md-component="source" href="https://github.com/pandreyanov/" title="Go to repository">
+<div class="md-source__icon md-icon">
+<svg viewbox="0 0 448 512" xmlns="http://www.w3.org/2000/svg"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"></path></svg>
+</div>
+<div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+</div>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item md-nav__item--nested">
+<input class="md-nav__toggle md-toggle" data-md-toggle="__nav_1" id="__nav_1" type="checkbox"/>
+<label class="md-nav__link" for="__nav_1">
+          Home
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Home" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_1">
+<span class="md-nav__icon md-icon"></span>
+          Home
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="..">
+        Home
+      </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item md-nav__item--active md-nav__item--nested">
+<input checked="" class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" id="__nav_2" type="checkbox"/>
+<label class="md-nav__link" for="__nav_2">
+          Auctions
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<nav aria-label="Auctions" class="md-nav" data-md-level="1">
+<label class="md-nav__title" for="__nav_2">
+<span class="md-nav__icon md-icon"></span>
+          Auctions
+        </label>
+<ul class="md-nav__list" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="../classic/">
+        Classic Auctions
+      </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="../double/">
+        Double Auctions
+      </a>
+</li>
+<li class="md-nav__item md-nav__item--active">
+<input class="md-nav__toggle md-toggle" data-md-toggle="toc" id="__toc" type="checkbox"/>
+<label class="md-nav__link md-nav__link--active" for="__toc">
+          Scoring Auctions
+          <span class="md-nav__icon md-icon"></span>
+</label>
+<a class="md-nav__link md-nav__link--active" href="./">
+        Scoring Auctions
+      </a>
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#intro-scoring">
+    Intro Scoring
+  </a>
+<nav aria-label="Intro Scoring" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#goals">
+    Goals
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#assets">
+    Assets
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#general-ideas">
+    General Ideas
+  </a>
+<nav aria-label="General Ideas" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scoring-rules">
+    Scoring rules
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nature-of-quality">
+    Nature of quality
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simple-models">
+    Simple models
+  </a>
+<nav aria-label="Simple models" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linear-score">
+    Linear score
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc">
+<div class="md-sidebar__scrollwrap">
+<div class="md-sidebar__inner">
+<nav aria-label="Table of contents" class="md-nav md-nav--secondary">
+<label class="md-nav__title" for="__toc">
+<span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+<ul class="md-nav__list" data-md-component="toc" data-md-scrollfix="">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#intro-scoring">
+    Intro Scoring
+  </a>
+<nav aria-label="Intro Scoring" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#goals">
+    Goals
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#assets">
+    Assets
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#general-ideas">
+    General Ideas
+  </a>
+<nav aria-label="General Ideas" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#scoring-rules">
+    Scoring rules
+  </a>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#nature-of-quality">
+    Nature of quality
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+<li class="md-nav__item">
+<a class="md-nav__link" href="#simple-models">
+    Simple models
+  </a>
+<nav aria-label="Simple models" class="md-nav">
+<ul class="md-nav__list">
+<li class="md-nav__item">
+<a class="md-nav__link" href="#linear-score">
+    Linear score
+  </a>
+</li>
+</ul>
+</nav>
+</li>
+</ul>
+</nav>
+</div>
+</div>
+</div>
+<div class="md-content" data-md-component="content">
+<article class="md-content__inner md-typeset">
+<a class="md-content__button md-icon" href="https://github.com/pandreyanov/edit/master/docs/scoring.md" title="Edit this page">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"></path></svg>
+</a>
+<h1 id="scoring-auctions"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.</span> Scoring Auctions</h1>
 <div class="highlight"><pre><span></span><code><span class="o">%</span><span class="n">run</span> <span class="n">publish</span><span class="o">.</span><span class="n">py</span>
 </code></pre></div>
-<h2 id="intro-scoring"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.1</span> Intro Scoring</h2>
+<h2 id="intro-scoring"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.1</span> Intro Scoring</h2>
 <p>This chapter studies models devoted to <strong>scoring auctions</strong>, that is, auctions where both price and quality matter. Quality is an abstraction and can take multiple forms such as: experience, preference, social impact, green tech... the nature of it could be different. What matters is that the auctioneer values certain non-monetary outcomes of the auction.</p>
 <p>In classic auctions, the idea is that the high-value (in value auctions) or the low-cost (in procurement auctions) firm wins. In scoring auctions, the firm with the best combination of monetary and non-monetary characteristics wins.</p>
 <p>Scoring auctions are quite important in the context of procurement. Military, construction, educational and even catering contracts are typically allocated through some sort of a scoring auctions. And even when they are formally not, it still makes sense to model them as such. Yet, the theory of scoring auctions (as of 2021) is somewhat underdeveloped. </p>
-<h3 id="goals"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.1.1</span> Goals</h3>
+<h3 id="goals"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.1.1</span> Goals</h3>
 <p>The goal of this chapter is to:</p>
 <ol>
 <li>Introduce a taxonomy of scoring auctions</li>
@@ -80,7 +341,7 @@ Theme by GitBook
 <li>Characterize equilibria in these models</li>
 <li>Learn to model and compare auction outcomes</li>
 </ol>
-<h3 id="assets"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.1.2</span> Assets</h3>
+<h3 id="assets"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.1.2</span> Assets</h3>
 <p>There is a handful of papers on the topic</p>
 <ol>
 <li><a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/che93.pdf">Design Competition Through Multidimensional Auctions, RAND, 1993</a></li>
@@ -90,8 +351,8 @@ Theme by GitBook
 <li><a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/handbook_procurement.pdf">Handbook of Procurement, Chapter 12</a></li>
 <li><a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/huang19.pdf">An empirical study of scoring auctions and quality manipulation corruption, EER, 2019</a></li>
 </ol>
-<h2 id="general-ideas"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.2</span> General Ideas</h2>
-<h3 id="scoring-rules"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.2.1</span> Scoring rules</h3>
+<h2 id="general-ideas"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.2</span> General Ideas</h2>
+<h3 id="scoring-rules"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.2.1</span> Scoring rules</h3>
 <p>We start with a loose definition of a scoring auction in a procurement environment</p>
 <div class="admonition warning">
 <p class="admonition-title">Definition</p>
@@ -163,7 +424,7 @@ Theme by GitBook
 <p class="admonition-title">Danger</p>
 <p>The theory of <strong>interdependent scoring rules</strong> is very difficult.</p>
 </div>
-<h3 id="nature-of-quality"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.2.2</span> Nature of quality</h3>
+<h3 id="nature-of-quality"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.2.2</span> Nature of quality</h3>
 <p>The quality characteristics can be of different nature. For example, some of them could be completely <strong>exogenous</strong>, like the number of years firm has been operating on the market. These are ojective characteristics of the firm and can not be changed. An example of <strong>endogenous</strong> quality is when the firm submits the number of days needed to complete a certain construction project. The firm has complete freedom to claim any number of days: 30, 100, 300... but her associated costs would probably be higher as well. It is not always possible to say with complete certainty whether quality is exogenous or endogenous.</p>
 <p>Another problem is that quality is not always completely objective and therefore is subject to <strong>manipulation</strong> (i.e. corruption), see, for example, <a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/huang19.pdf">An empirical study of scoring auctions and quality manipulation corruption, EER, 2019</a>. When the risk of manipulation is low, it is possible to not commit to any particular evaluation criteria, or announce the criteria afted the proposals were submitted, so that the buyer has the last word. When the risk of manipulation is high, it makes more sense to commit to  strict and standardized evaluation criteria.</p>
 <details class="quote"><summary>Read from Handbook of Procurement</summary><p>Detailed ex-ante specifications increase the predictability of procurement competition, minimizing risks of discretionary behaviour and abuses of the evaluating committee (e.g., corruption). This comes at the cost of losing some flexibility. Therefore, the buyer should carefully evaluate and compare case by case costs and benefits of both flexibility and predictability. When corruption is not a particular concern and participants can offer different valuable solutions for the good or service to be procured, it is more likely that benefits from flexibility prevail. In this case, there can be much to gain from ex-post evaluation. In contrast, if corruption during the evaluation process is a concern, ex-post flexibility should be minimized either by adopting an ex-ante BME (automatic scoring) or, in case this were not possible, by reducing the weight given to technical attributes.</p>
@@ -182,8 +443,8 @@ Theme by GitBook
 <li>design prototype (same)</li>
 </ul>
 <p>belong on the spectrum between exogenous and endogenous, sunk and manipulable.</p>
-<h2 id="simple-models"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.3</span> Simple models</h2>
-<h3 id="linear-score"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.3.1</span> Linear score</h3>
+<h2 id="simple-models"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.3</span> Simple models</h2>
+<h3 id="linear-score"><span class="enumerate-headings-plugin enumerate-heading-plugin">4.3.1</span> Linear score</h3>
 <p>We start with a simplest model where quality is exogenous.</p>
 <div class="admonition warning">
 <p class="admonition-title">Model summary</p>
@@ -197,33 +458,55 @@ Theme by GitBook
 </ul>
 </div>
 <p>We wish to characterize a symmetric Bayes-Nash equilibrium, that is, our answer should be an equilibrium bidding strategy <span class="arithmatex">\(\beta(c, q)\)</span>.</p>
-<h1 id="compilation-code"><span class="enumerate-headings-plugin enumerate-heading-plugin">6.</span> Compilation code</h1>
+<h1 id="compilation-code"><span class="enumerate-headings-plugin enumerate-heading-plugin">5.</span> Compilation code</h1>
 <div class="highlight"><pre><span></span><code><span class="o">%%</span><span class="n">capture</span>
 <span class="o">%%</span><span class="n">bash</span>
 <span class="n">cd</span> <span class="o">../</span><span class="p">;</span> <span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">markdown</span> <span class="n">docs</span><span class="o">/*.</span><span class="n">ipynb</span><span class="p">;</span> <span class="n">mkdocs</span> <span class="n">build</span><span class="p">;</span> <span class="n">mkdocs</span> <span class="n">gh</span><span class="o">-</span><span class="n">deploy</span>
 </code></pre></div>
-</section>
-</div> <!-- end of search-noresults -->
-<div class="search-results">
-<div class="has-results">
-<h1 class="search-results-title"><span class="enumerate-headings-plugin enumerate-heading-plugin">7.</span> <span class="search-results-count"></span> results matching "<span class="search-query"></span>"</h1>
-<ul class="search-results-list"></ul>
-</div> <!-- end of has-results -->
-<div class="no-results">
-<h1 class="search-results-title"><span class="enumerate-headings-plugin enumerate-heading-plugin">8.</span> No results matching "<span class="search-query"></span>"</h1>
-</div> <!-- end of no-results -->
-</div> <!-- end of search-results -->
-</div> <!-- end of book-search-results -->
-</div> <!-- end of page-inner -->
-</div> <!-- end of page-wrapper -->
-</div> <!-- end of body-inner -->
-</div> <!-- end of book-body -->
-<script src="../js/main.js"></script>
+</article>
+</div>
+</div>
+</main>
+<footer class="md-footer">
+<nav aria-label="Footer" class="md-footer__inner md-grid">
+<a aria-label="Previous: Double Auctions" class="md-footer__link md-footer__link--prev" href="../double/" rel="prev">
+<div class="md-footer__button md-icon">
+<svg viewbox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"></path></svg>
+</div>
+<div class="md-footer__title">
+<div class="md-ellipsis">
+<span class="md-footer__direction">
+                Previous
+              </span>
+              Double Auctions
+            </div>
+</div>
+</a>
+</nav>
+<div class="md-footer-meta md-typeset">
+<div class="md-footer-meta__inner md-grid">
+<div class="md-footer-copyright">
+<div class="md-footer-copyright__highlight">
+            Copyright © 2021 - 2025 Pasha Andreyanov
+          </div>
+        
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" rel="noopener" target="_blank">
+            Material for MkDocs
+          </a>
+</div>
+</div>
+</div>
+</footer>
+</div>
+<div class="md-dialog" data-md-component="dialog">
+<div class="md-dialog__inner md-typeset"></div>
+</div>
+<script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+<script src="../assets/javascripts/bundle.b1047164.min.js"></script>
 <script src="../javascripts/mathjax.js"></script>
 <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
 <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-<script src="../search/main.js"></script>
-<script src="../js/gitbook.min.js"></script>
-<script src="../js/theme.min.js"></script>
-</div></body>
+</body>
 </html>
