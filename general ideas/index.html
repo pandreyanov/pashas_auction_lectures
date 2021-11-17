@@ -414,15 +414,15 @@ Scoring rules are defined up to a monotone transformation, so </p>
 <pre><code>+----+----------+---------+----------+-----------+--------+-----------+---------+
 |    |   q_year |   q_exp |   q_prop |   q_index |    bid |   reserve |   score |
 +====+==========+=========+==========+===========+========+===========+=========+
-|  0 |        3 |      95 |       64 |     0.761 | 837.1  |   1651.44 |    0.57 |
+|  0 |        4 |      77 |        6 |     0.449 | 416    |   2057.7  |    0.69 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  1 |        5 |      54 |       13 |     0.372 | 376.98 |   1142.72 |    0.58 |
+|  1 |        2 |      78 |        6 |     0.434 | 414.29 |   1772.61 |    0.67 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  2 |        3 |      36 |       59 |     0.446 | 387.9  |   2011.87 |    0.7  |
+|  2 |        3 |      17 |       85 |     0.455 | 794.82 |   1946.23 |    0.55 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  3 |        8 |      74 |       65 |     0.71  | 606.07 |   1766.87 |    0.67 |
+|  3 |        3 |      55 |       29 |     0.421 | 421.74 |   1443.2  |    0.62 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  4 |        5 |      47 |       26 |     0.389 | 433.78 |   1342.48 |    0.59 |
+|  4 |        6 |      19 |       58 |     0.387 | 391.29 |   2048.44 |    0.68 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
 </code></pre>
 <p>In the table above we have three underlying quality characteristics: <em>q_year</em> (years in the market), <em>q_exp</em> (experience), <em>q_prop</em> (proposition), that are weighted into a single quality index <em>q_index</em>. This index is then weighted against the discount, which is not present in the table explicitly. Note that you do not need to have access to all of the variables, some of them are clearly linearly dependent. Alternatively, you might not know the scoring rule, in which case you have to guess it from the data.</p>
@@ -460,10 +460,6 @@ The theory of scoring auctions with <strong>sunk costs</strong>, other than <str
 <li>design prototype (same)</li>
 </ul>
 <p>belong on the spectrum between exogenous and endogenous, sunk and manipulable.</p>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
                 
               
               
