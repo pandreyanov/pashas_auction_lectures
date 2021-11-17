@@ -481,11 +481,13 @@
 <p>In classic auctions, the idea is that the high-value (in value auctions) or the low-cost (in procurement auctions) firm wins. In scoring auctions, the firm with the best combination of monetary and non-monetary characteristics wins.</p>
 <p>Scoring auctions are quite important in the context of procurement. Military, construction, educational and even catering contracts are typically allocated through some sort of a scoring auctions. And even when they are formally not, it still makes sense to model them as such. Yet, the theory of scoring auctions (as of 2021) is somewhat underdeveloped. </p>
 <h3 id="goals">Goals</h3>
-<p>The goal of this chapter is to:
-1. Introduce a taxonomy of scoring auctions
-2. Introduce a family of scoring auction models
-3. Characterize equilibria in these models
-4. Learn to model and compare auction outcomes</p>
+<p>The goal of this chapter is to:</p>
+<ol>
+<li>Introduce a taxonomy of scoring auctions</li>
+<li>Introduce a family of scoring auction models</li>
+<li>Characterize equilibria in these models</li>
+<li>Learn to model and compare auction outcomes</li>
+</ol>
 <h3 id="assets">Assets</h3>
 <p>There is a handful of papers on the topic</p>
 <ol>
@@ -604,9 +606,10 @@
 </div>
 <p>We wish to characterize a symmetric Bayes-Nash equilibrium, that is, our answer should be an equilibrium bidding strategy <span class="arithmatex">\(\beta(c, q)\)</span>.</p>
 <h2 id="compilation-code">Compilation code</h2>
-<div class="highlight"><pre><span></span><code><span class="o">%%</span><span class="n">capture</span>
-<span class="o">%%</span><span class="n">bash</span> 
+<div class="highlight"><pre><span></span><code><span class="o">%%</span><span class="n">capture</span> <span class="o">%%</span><span class="n">bash</span> 
 <span class="n">cd</span> <span class="o">../</span><span class="p">;</span> <span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">markdown</span> <span class="n">docs</span><span class="o">/*.</span><span class="n">ipynb</span><span class="p">;</span> <span class="n">mkdocs</span> <span class="n">build</span><span class="p">;</span> <span class="n">mkdocs</span> <span class="n">gh</span><span class="o">-</span><span class="n">deploy</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>
 </code></pre></div>
                 
               
