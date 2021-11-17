@@ -11,6 +11,7 @@ plt.style.use('ggplot')
 sb.set_style('white')
 
 plt.rcParams.update({
+    "text.usetex": True,
     "font.family": "serif",
     "font.serif": ["Palatino"],
 })
