@@ -340,6 +340,14 @@
                 
                 
                 <h1 id="general-ideas">General Ideas</h1>
+<div class="highlight"><pre><span></span><code><span class="n">options_scatter</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;s&#39;</span><span class="p">:</span><span class="mi">15</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="s1">&#39;edgecolor&#39;</span><span class="p">:</span><span class="s1">&#39;black&#39;</span><span class="p">}</span>
+<span class="n">options_hist</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="s1">&#39;bins&#39;</span><span class="p">:</span><span class="mi">25</span><span class="p">,</span> <span class="s1">&#39;edgecolor&#39;</span><span class="p">:</span><span class="s1">&#39;black&#39;</span><span class="p">}</span>
+
+<span class="k">def</span> <span class="nf">publish</span><span class="p">(</span><span class="n">fig</span><span class="p">):</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">)</span>
+    <span class="n">fig</span><span class="o">.</span><span class="n">set_dpi</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span>
+    <span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+</code></pre></div>
 <h2 id="scoring-rules">Scoring rules</h2>
 <p>We start with a loose definition of a scoring auction in a procurement environment</p>
 <p>:::{admonition} Definition
@@ -385,15 +393,15 @@ Scoring rules are defined up to a monotone transformation, so </p>
 <pre><code>+-----+----------+---------+----------+-----------+--------+-----------+---------+
 |     |   q_year |   q_exp |   q_prop |   q_index |    bid |   reserve |   score |
 +=====+==========+=========+==========+===========+========+===========+=========+
-| 937 |        8 |      50 |       55 |     0.55  | 409.66 |   1383.23 |    0.66 |
+| 825 |        2 |      31 |       18 |     0.247 | 271.11 |   1580.43 |    0.65 |
 +-----+----------+---------+----------+-----------+--------+-----------+---------+
-| 307 |        9 |      18 |       91 |     0.544 | 532.39 |   1943.52 |    0.67 |
+| 976 |        2 |      40 |       54 |     0.436 | 504.48 |   1375.98 |    0.57 |
 +-----+----------+---------+----------+-----------+--------+-----------+---------+
-| 309 |        1 |      10 |       70 |     0.34  | 404.73 |   1864.43 |    0.65 |
+| 411 |        9 |       5 |       81 |     0.439 | 435.97 |   1893.46 |    0.67 |
 +-----+----------+---------+----------+-----------+--------+-----------+---------+
-|  46 |        6 |      23 |       77 |     0.483 | 490.42 |   2088.67 |    0.68 |
+| 561 |        8 |      83 |       91 |     0.859 | 903.17 |   1851.82 |    0.62 |
 +-----+----------+---------+----------+-----------+--------+-----------+---------+
-| 792 |        7 |      38 |       86 |     0.604 | 636.84 |   1666.38 |    0.61 |
+| 521 |        8 |      25 |       61 |     0.449 | 521.98 |   2014.33 |    0.65 |
 +-----+----------+---------+----------+-----------+--------+-----------+---------+
 </code></pre>
 <p>In the table above we have three underlying quality characteristics: <em>q_year</em> (years in the market), <em>q_exp</em> (experience), <em>q_prop</em> (proposition), that are weighted into a single quality index <em>q_index</em>. This index is then weighted against the discount, which is not present in the table explicitly. Note that you do not need to have access to all of the variables, some of them are clearly linearly dependent. Alternatively, you might not know the scoring rule, in which case you have to guess it from the data.</p>
@@ -404,17 +412,13 @@ Scoring rules are defined up to a monotone transformation, so </p>
 <span class="n">fig</span><span class="p">,</span> <span class="p">(</span><span class="n">ax1</span><span class="p">,</span> <span class="n">ax2</span><span class="p">)</span> <span class="o">=</span> <span class="n">plt</span><span class="o">.</span><span class="n">subplots</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;discount %&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">reserve</span> <span class="o">-</span> <span class="n">df</span><span class="o">.</span><span class="n">bid</span><span class="p">)</span><span class="o">/</span><span class="n">df</span><span class="o">.</span><span class="n">reserve</span>
-<span class="n">options_1</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;s&#39;</span><span class="p">:</span><span class="mi">15</span><span class="p">,</span> <span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="s1">&#39;ax&#39;</span><span class="p">:</span><span class="n">ax2</span><span class="p">,</span> <span class="s1">&#39;edgecolor&#39;</span><span class="p">:</span><span class="s1">&#39;black&#39;</span><span class="p">}</span>
-<span class="n">options_2</span> <span class="o">=</span> <span class="p">{</span><span class="s1">&#39;color&#39;</span><span class="p">:</span><span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="s1">&#39;ax&#39;</span><span class="p">:</span><span class="n">ax1</span><span class="p">,</span> <span class="s1">&#39;bins&#39;</span><span class="p">:</span><span class="mi">25</span><span class="p">}</span>
 
-<span class="n">sb</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;discount %&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;q_index&#39;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="o">**</span><span class="n">options_1</span><span class="p">);</span>
-<span class="n">sb</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">score</span><span class="p">,</span> <span class="o">**</span><span class="n">options_2</span><span class="p">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="n">scatterplot</span><span class="p">(</span><span class="n">x</span> <span class="o">=</span> <span class="s1">&#39;discount %&#39;</span><span class="p">,</span> <span class="n">y</span> <span class="o">=</span> <span class="s1">&#39;q_index&#39;</span><span class="p">,</span> <span class="n">data</span> <span class="o">=</span> <span class="n">df</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax1</span><span class="p">,</span> <span class="o">**</span><span class="n">options_scatter</span><span class="p">);</span>
+<span class="n">sb</span><span class="o">.</span><span class="n">histplot</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">score</span><span class="p">,</span> <span class="n">ax</span> <span class="o">=</span> <span class="n">ax2</span><span class="p">,</span> <span class="o">**</span><span class="n">options_hist</span><span class="p">);</span>
 
-<span class="n">fig</span><span class="o">.</span><span class="n">set_size_inches</span><span class="p">(</span><span class="mi">5</span><span class="p">,</span> <span class="mi">6</span><span class="p">,</span> <span class="n">forward</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
-<span class="n">fig</span><span class="o">.</span><span class="n">set_dpi</span><span class="p">(</span><span class="mi">150</span><span class="p">)</span>
-<span class="n">plt</span><span class="o">.</span><span class="n">tight_layout</span><span class="p">()</span>
+<span class="n">publish</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
 </code></pre></div>
-<p><img alt="png" src="../general%20ideas_files/general%20ideas_3_0.png" /></p>
+<p><img alt="png" src="../general%20ideas_files/general%20ideas_5_0.png" /></p>
 <p>It is natural to expect that quality and discount should be negatively correlated as higher quality is associated with higher costs. However, in practice, the correlation can be actually positive due to strategic reasons (non-monotonicity of monopoly price in demand).</p>
 <p>:::{note}
 The theory of <strong>interdependent scoring rules</strong> is virtually non-existent, yet they are quite popular in practice. Russian Federation and Italy have been experimenting a lot with complex auction rules, including scoring.
