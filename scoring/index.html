@@ -602,10 +602,9 @@
 </div>
 <p>We wish to characterize a symmetric Bayes-Nash equilibrium, that is, our answer should be an equilibrium bidding strategy <span class="arithmatex">\(\beta(c, q)\)</span>.</p>
 <h3 id="compilation-code">Compilation code</h3>
-<div class="highlight"><pre><span></span><code>%%bash 
-<span class="nb">cd</span> ../<span class="p">;</span> jupyter nbconvert --to markdown docs/*.ipynb<span class="p">;</span> mkdocs build<span class="p">;</span> mkdocs gh-deploy<span class="p">;</span> mkdocs serve
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>
+<div class="highlight"><pre><span></span><code><span class="o">%%</span><span class="n">capture</span>
+<span class="o">%%</span><span class="n">bash</span> 
+<span class="n">cd</span> <span class="o">../</span><span class="p">;</span> <span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">markdown</span> <span class="n">docs</span><span class="o">/*.</span><span class="n">ipynb</span><span class="p">;</span> <span class="n">mkdocs</span> <span class="n">build</span><span class="p">;</span> <span class="n">mkdocs</span> <span class="n">gh</span><span class="o">-</span><span class="n">deploy</span>
 </code></pre></div>
                 
               
