@@ -602,12 +602,12 @@
 </div>
 <p>We wish to characterize a symmetric Bayes-Nash equilibrium, that is, our answer should be an equilibrium bidding strategy <span class="arithmatex">\(\beta(c, q)\)</span>.</p>
 <h3 id="compilation-code">Compilation code</h3>
-<div class="highlight"><pre><span></span><code><span class="err">!</span> <span class="n">cd</span> <span class="o">../</span><span class="p">;</span> <span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">markdown</span> <span class="n">docs</span><span class="o">/*.</span><span class="n">ipynb</span><span class="p">;</span> <span class="n">mkdocs</span> <span class="n">build</span><span class="p">;</span> <span class="n">mkdocs</span> <span class="n">gh</span><span class="o">-</span><span class="n">deploy</span>
+<div class="highlight"><pre><span></span><code><span class="err">!</span> <span class="n">cd</span> <span class="o">../</span><span class="p">;</span> <span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">markdown</span> <span class="n">docs</span><span class="o">/*.</span><span class="n">ipynb</span><span class="p">;</span> <span class="n">mkdocs</span> <span class="n">build</span><span class="p">;</span> <span class="n">mkdocs</span> <span class="n">gh</span><span class="o">-</span><span class="n">deploy</span><span class="p">;</span> <span class="n">mkdocs</span> <span class="n">serve</span>
 </code></pre></div>
 <pre><code>[NbConvertApp] Converting notebook docs/scoring.ipynb to markdown
 [NbConvertApp] Support files will be in scoring_files/
 [NbConvertApp] Making directory docs/scoring_files
-[NbConvertApp] Writing 13509 bytes to docs/scoring.md
+[NbConvertApp] Writing 12576 bytes to docs/scoring.md
 INFO     -  Cleaning site directory
 INFO     -  Building documentation to directory:
             /Users/pasha/Documents/GitHub/pashas_auction_lectures/site
@@ -615,20 +615,30 @@ INFO     -  Documentation built in 0.33 seconds
 INFO     -  Cleaning site directory
 INFO     -  Building documentation to directory:
             /Users/pasha/Documents/GitHub/pashas_auction_lectures/site
-INFO     -  Documentation built in 0.33 seconds
+INFO     -  Documentation built in 0.34 seconds
 INFO     -  Copying '/Users/pasha/Documents/GitHub/pashas_auction_lectures/site'
             to 'gh-pages' branch and pushing to GitHub.
 Enumerating objects: 5, done.
 Counting objects: 100% (5/5), done.
 Delta compression using up to 8 threads
 Compressing objects: 100% (3/3), done.
-Writing objects: 100% (3/3), 310 bytes | 310.00 KiB/s, done.
+Writing objects: 100% (3/3), 308 bytes | 308.00 KiB/s, done.
 Total 3 (delta 2), reused 0 (delta 0), pack-reused 0
 remote: Resolving deltas: 100% (2/2), completed with 2 local objects.[K
 To https://github.com/pandreyanov/pashas_auction_lectures.git
-   c3fcf1a..a1a9c38  gh-pages -&gt; gh-pages
+   383f079..fcda394  gh-pages -&gt; gh-pages
 INFO     -  Your documentation should shortly be available at:
             https://pandreyanov.github.io/pashas_auction_lectures/
+INFO     -  Building documentation...
+INFO     -  Cleaning site directory
+INFO     -  Documentation built in 0.34 seconds
+INFO     -  [22:52:53] Serving on http://127.0.0.1:8000/
+[33mWARNING  -  [0m[22:53:00] "GET /javascripts/mathjax.js HTTP/1.1" code 404
+[33mWARNING  -  [0m[22:53:00] "GET /javascripts/mathjax.js HTTP/1.1" code 404
+INFO     -  [22:53:00] Browser connected: http://127.0.0.1:8000/
+[33mWARNING  -  [0m[22:53:01] "GET /javascripts/mathjax.js HTTP/1.1" code 404
+[33mWARNING  -  [0m[22:53:01] "GET /javascripts/mathjax.js HTTP/1.1" code 404
+INFO     -  [22:53:01] Browser connected: http://127.0.0.1:8000/scoring/
 </code></pre>
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
