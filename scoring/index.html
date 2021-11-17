@@ -559,15 +559,15 @@
 <pre><code>+----+----------+---------+----------+-----------+--------+-----------+---------+
 |    |   q-year |   q-exp |   q-prop |   q-index |    bid |   reserve |   score |
 +====+==========+=========+==========+===========+========+===========+=========+
-|  0 |        8 |      53 |       22 |     0.433 | 383.26 |   1599.63 |    0.66 |
+|  0 |        4 |      79 |       18 |     0.507 | 650.28 |   1239.94 |    0.48 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  1 |        6 |      69 |       28 |     0.517 | 476.85 |   1474.39 |    0.63 |
+|  1 |        8 |      38 |       78 |     0.582 | 545.99 |   2071.59 |    0.69 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  2 |        3 |      22 |        1 |     0.144 | 260.92 |   1935.43 |    0.65 |
+|  2 |        3 |      92 |       59 |     0.726 | 756.15 |   1279.75 |    0.5  |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  3 |        1 |      65 |       41 |     0.499 | 503.08 |   1392.12 |    0.6  |
+|  3 |        8 |      35 |       49 |     0.451 | 537.11 |   1916.6  |    0.64 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  4 |        7 |      78 |       92 |     0.828 | 925.52 |   1928.08 |    0.61 |
+|  4 |        3 |      59 |       41 |     0.489 | 555.93 |   1536.95 |    0.59 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
 </code></pre>
 <p>In the table above we have three underlying quality characteristics: <em>q_year</em> (years in the market), <em>q_exp</em> (experience), <em>q_prop</em> (proposition), that are weighted into a single quality index <em>q_index</em>. This index is then weighted against the discount, which is not present in the table explicitly. Note that you do not need to have access to all of the variables, some of them are clearly linearly dependent. Alternatively, you might not know the scoring rule, in which case you have to guess it from the data.</p>
