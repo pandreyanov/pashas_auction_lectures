@@ -487,13 +487,15 @@
 3. Characterize equilibria in these models
 4. Learn to model and compare auction outcomes</p>
 <h3 id="assets">Assets</h3>
-<p>There is a handful of papers on the topic
-1. <a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/che93.pdf">Design Competition Through Multidimensional Auctions, RAND, 1993</a>
-2. <a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/asker08.pdf">Properties of scoring auctions, RAND, 2008</a>
-3. <a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/asker10.pdf">Procurement when price and quality matter, RAND, 2010</a>
-4. <a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/my_diss.pdf">My dissertation, Chapter 1</a>
-5. <a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/handbook_procurement.pdf">Handbook of Procurement, Chapter 12</a>
-6. <a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/huang19.pdf">An empirical study of scoring auctions and quality manipulation corruption, EER, 2019</a></p>
+<p>There is a handful of papers on the topic</p>
+<ol>
+<li><a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/che93.pdf">Design Competition Through Multidimensional Auctions, RAND, 1993</a></li>
+<li><a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/asker08.pdf">Properties of scoring auctions, RAND, 2008</a></li>
+<li><a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/asker10.pdf">Procurement when price and quality matter, RAND, 2010</a></li>
+<li><a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/my_diss.pdf">My dissertation, Chapter 1</a></li>
+<li><a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/handbook_procurement.pdf">Handbook of Procurement, Chapter 12</a></li>
+<li><a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/huang19.pdf">An empirical study of scoring auctions and quality manipulation corruption, EER, 2019</a></li>
+</ol>
 <h2 id="general-ideas">General Ideas</h2>
 <h3 id="scoring-rules">Scoring rules</h3>
 <p>We start with a loose definition of a scoring auction in a procurement environment</p>
@@ -539,15 +541,15 @@
 <pre><code>+----+----------+---------+----------+-----------+--------+-----------+---------+
 |    |   q-year |   q-exp |   q-prop |   q-index |    bid |   reserve |   score |
 +====+==========+=========+==========+===========+========+===========+=========+
-|  0 |        8 |      77 |       87 |     0.813 | 837.02 |   1846.21 |    0.63 |
+|  0 |        1 |      59 |       57 |     0.533 | 526.67 |   1682.2  |    0.64 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  1 |        1 |      10 |       25 |     0.16  | 227.85 |   1261.52 |    0.62 |
+|  1 |        6 |      87 |       62 |     0.743 | 625.84 |   1987.11 |    0.7  |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  2 |        7 |      79 |       77 |     0.773 | 784.67 |   1933.7  |    0.65 |
+|  2 |        8 |      38 |        9 |     0.306 | 337.77 |   1081.4  |    0.57 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  3 |        8 |      79 |       50 |     0.675 | 569.94 |   1647.45 |    0.66 |
+|  3 |        8 |      35 |       32 |     0.383 | 383.31 |   1813.63 |    0.67 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  4 |        9 |      24 |       35 |     0.35  | 280.92 |   1800.55 |    0.7  |
+|  4 |        8 |       7 |       10 |     0.155 | 434.93 |   1103.96 |    0.47 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
 </code></pre>
 <p>In the table above we have three underlying quality characteristics: <em>q_year</em> (years in the market), <em>q_exp</em> (experience), <em>q_prop</em> (proposition), that are weighted into a single quality index <em>q_index</em>. This index is then weighted against the discount, which is not present in the table explicitly. Note that you do not need to have access to all of the variables, some of them are clearly linearly dependent. Alternatively, you might not know the scoring rule, in which case you have to guess it from the data.</p>
