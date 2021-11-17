@@ -18,7 +18,7 @@ sb.set_style('white')
 def publish(entry):
     if type(entry) == mpl.figure.Figure:
         entry.set_size_inches(5, 6)
-        entry.set_dpi(200)
+        entry.set_dpi(300)
         plt.tight_layout()
         
     if type(entry) == pd.core.frame.DataFrame:
