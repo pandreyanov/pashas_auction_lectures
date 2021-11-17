@@ -34,8 +34,8 @@
       
         
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,400i,700%7C&display=fallback">
-        <style>:root{--md-text-font-family:"Roboto";--md-code-font-family:""}</style>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=:300,400,400i,700%7CRoboto+Medium+500&display=fallback">
+        <style>:root{--md-text-font-family:"";--md-code-font-family:"Roboto Medium 500"}</style>
       
     
     
@@ -163,6 +163,41 @@
       
         
           
+            
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
+  <div class="md-tabs__inner md-grid">
+    <ul class="md-tabs__list">
+      
+        
+  
+  
+
+
+  <li class="md-tabs__item">
+    <a href=".." class="md-tabs__link">
+      Home
+    </a>
+  </li>
+
+      
+        
+  
+  
+    
+  
+
+
+  <li class="md-tabs__item">
+    <a href="./" class="md-tabs__link md-tabs__link--active">
+      Scoring Auctions
+    </a>
+  </li>
+
+      
+    </ul>
+  </div>
+</nav>
+          
         
       
       <main class="md-main" data-md-component="main">
@@ -175,8 +210,10 @@
                   <div class="md-sidebar__inner">
                     
 
+  
 
-<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
     <a href=".." title="Graduate Lectures in Microeconomics" class="md-nav__button md-logo" aria-label="Graduate Lectures in Microeconomics" data-md-component="logo">
       
@@ -543,15 +580,15 @@
 <pre><code>+----+----------+---------+----------+-----------+--------+-----------+---------+
 |    |   q-year |   q-exp |   q-prop |   q-index |    bid |   reserve |   score |
 +====+==========+=========+==========+===========+========+===========+=========+
-|  0 |        4 |      85 |       55 |     0.685 | 528.73 |   1912.28 |    0.71 |
+|  0 |        6 |      14 |        5 |     0.15  | 100    |   1859.72 |    0.71 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  1 |        8 |      85 |       40 |     0.665 | 920.69 |   1495.6  |    0.47 |
+|  1 |        3 |      27 |       46 |     0.349 | 329.78 |   1374.58 |    0.64 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  2 |        6 |      82 |       95 |     0.85  | 841.48 |   1353.69 |    0.52 |
+|  2 |        3 |      51 |       24 |     0.381 | 400.21 |   1743.87 |    0.65 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  3 |        3 |      70 |       20 |     0.46  | 526.5  |   1028.52 |    0.48 |
+|  3 |        8 |      77 |       56 |     0.689 | 729.99 |   1962.68 |    0.65 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  4 |        3 |      57 |       31 |     0.439 | 426.05 |   1825.03 |    0.67 |
+|  4 |        6 |      65 |       39 |     0.541 | 473.58 |   1794.19 |    0.68 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
 </code></pre>
 <p>In the table above we have three underlying quality characteristics: <em>q_year</em> (years in the market), <em>q_exp</em> (experience), <em>q_prop</em> (proposition), that are weighted into a single quality index <em>q_index</em>. This index is then weighted against the discount, which is not present in the table explicitly. Note that you do not need to have access to all of the variables, some of them are clearly linearly dependent. Alternatively, you might not know the scoring rule, in which case you have to guess it from the data.</p>
@@ -609,6 +646,8 @@
 <div class="highlight"><pre><span></span><code><span class="o">%%</span><span class="n">capture</span> 
 <span class="o">%%</span><span class="n">bash</span> 
 <span class="n">cd</span> <span class="o">../</span><span class="p">;</span> <span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">markdown</span> <span class="n">docs</span><span class="o">/*.</span><span class="n">ipynb</span><span class="p">;</span> <span class="n">mkdocs</span> <span class="n">build</span><span class="p">;</span> <span class="n">mkdocs</span> <span class="n">gh</span><span class="o">-</span><span class="n">deploy</span>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>
 </code></pre></div>
                 
               
@@ -671,7 +710,7 @@
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-    <script id="__config" type="application/json">{"base": "..", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["navigation.tabs", "header.autohide"], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "../assets/javascripts/workers/search.fcfe8b6d.min.js", "version": null}</script>
     
     
       <script src="../assets/javascripts/bundle.b1047164.min.js"></script>
