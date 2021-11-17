@@ -543,15 +543,15 @@
 <pre><code>+----+----------+---------+----------+-----------+--------+-----------+---------+
 |    |   q-year |   q-exp |   q-prop |   q-index |    bid |   reserve |   score |
 +====+==========+=========+==========+===========+========+===========+=========+
-|  0 |        3 |      53 |        8 |     0.327 | 327.71 |   2061.41 |    0.69 |
+|  0 |        8 |      30 |       40 |     0.39  | 397.82 |   1147.5  |    0.57 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  1 |        9 |       6 |       51 |     0.324 | 317.5  |   1543.13 |    0.65 |
+|  1 |        4 |      37 |       97 |     0.613 | 677.72 |   1857.33 |    0.63 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  2 |        6 |      67 |       95 |     0.775 | 770.45 |   1812.36 |    0.63 |
+|  2 |        9 |      71 |       10 |     0.485 | 412.18 |   1916.9  |    0.69 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  3 |        2 |      90 |       21 |     0.554 | 531    |   1450.71 |    0.61 |
+|  3 |        1 |       5 |       98 |     0.427 | 390.63 |   1195.13 |    0.6  |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  4 |        8 |      22 |        3 |     0.202 | 165.98 |   1886.74 |    0.7  |
+|  4 |        3 |      84 |        0 |     0.45  | 501.14 |   1938.56 |    0.65 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
 </code></pre>
 <p>In the table above we have three underlying quality characteristics: <em>q_year</em> (years in the market), <em>q_exp</em> (experience), <em>q_prop</em> (proposition), that are weighted into a single quality index <em>q_index</em>. This index is then weighted against the discount, which is not present in the table explicitly. Note that you do not need to have access to all of the variables, some of them are clearly linearly dependent. Alternatively, you might not know the scoring rule, in which case you have to guess it from the data.</p>
@@ -608,58 +608,8 @@
 <h2 id="compilation-code">Compilation code</h2>
 <div class="highlight"><pre><span></span><code><span class="o">%%</span><span class="n">capture</span> 
 <span class="o">%%</span><span class="n">bash</span> 
-<span class="n">cd</span> <span class="o">../</span><span class="p">;</span> <span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">markdown</span> <span class="n">docs</span><span class="o">/*.</span><span class="n">ipynb</span><span class="p">;</span> <span class="n">mkdocs</span> <span class="n">build</span> <span class="o">&gt;</span> <span class="n">log</span><span class="o">.</span><span class="n">txt</span><span class="p">;</span> <span class="n">mkdocs</span> <span class="n">gh</span><span class="o">-</span><span class="n">deploy</span>
+<span class="n">cd</span> <span class="o">../</span><span class="p">;</span> <span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">markdown</span> <span class="n">docs</span><span class="o">/*.</span><span class="n">ipynb</span><span class="p">;</span> <span class="n">mkdocs</span> <span class="n">build</span><span class="p">;</span> <span class="n">mkdocs</span> <span class="n">gh</span><span class="o">-</span><span class="n">deploy</span>
 </code></pre></div>
-<pre><code>---------------------------------------------------------------------------
-
-CalledProcessError                        Traceback (most recent call last)
-
-/var/folders/3s/zw_wmd61771gz7l_52mzfg680000gn/T/ipykernel_35397/2983618926.py in &lt;module&gt;
-----&gt; 1 get_ipython().run_cell_magic('bash', '', 'cd ../; jupyter nbconvert --to markdown docs/*.ipynb; mkdocs build &gt; log.txt; mkdocs gh-deploy\n')
-
-
-~/Documents/Conda/envs/py37an/lib/python3.7/site-packages/IPython/core/interactiveshell.py in run_cell_magic(self, magic_name, line, cell)
-   2404             with self.builtin_trap:
-   2405                 args = (magic_arg_s, cell)
--&gt; 2406                 result = fn(*args, **kwargs)
-   2407             return result
-   2408
-
-
-~/Documents/Conda/envs/py37an/lib/python3.7/site-packages/IPython/core/magics/script.py in named_script_magic(line, cell)
-    140             else:
-    141                 line = script
---&gt; 142             return self.shebang(line, cell)
-    143 
-    144         # write a basic docstring:
-
-
-~/Documents/Conda/envs/py37an/lib/python3.7/site-packages/decorator.py in fun(*args, **kw)
-    230             if not kwsyntax:
-    231                 args, kw = fix(args, kw, sig)
---&gt; 232             return caller(func, *(extras + args), **kw)
-    233     fun.__name__ = func.__name__
-    234     fun.__doc__ = func.__doc__
-
-
-~/Documents/Conda/envs/py37an/lib/python3.7/site-packages/IPython/core/magic.py in &lt;lambda&gt;(f, *a, **k)
-    185     # but it's overkill for just that one bit of state.
-    186     def magic_deco(arg):
---&gt; 187         call = lambda f, *a, **k: f(*a, **k)
-    188 
-    189         if callable(arg):
-
-
-~/Documents/Conda/envs/py37an/lib/python3.7/site-packages/IPython/core/magics/script.py in shebang(self, line, cell)
-    243             sys.stderr.flush()
-    244         if args.raise_error and p.returncode!=0:
---&gt; 245             raise CalledProcessError(p.returncode, cell, output=out, stderr=err)
-    246 
-    247     def _run_script(self, p, cell, to_close):
-
-
-CalledProcessError: Command 'b'cd ../; jupyter nbconvert --to markdown docs/*.ipynb; mkdocs build &gt; log.txt; mkdocs gh-deploy\n'' returned non-zero exit status 1.
-</code></pre>
 <div class="highlight"><pre><span></span><code>
 </code></pre></div>
                 
@@ -701,6 +651,10 @@ CalledProcessError: Command 'b'cd ../; jupyter nbconvert --to markdown docs/*.ip
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
       <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 - 2025 Pasha Andreyanov
+          </div>
         
         
         
