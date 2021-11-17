@@ -409,21 +409,21 @@ Scoring rules are defined up to a monotone transformation, so </p>
 
 <span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">np</span><span class="o">.</span><span class="n">vstack</span><span class="p">((</span><span class="n">y</span><span class="p">,</span><span class="n">e</span><span class="p">,</span><span class="n">p</span><span class="p">,</span><span class="n">q</span><span class="p">,</span><span class="n">b</span><span class="p">,</span><span class="n">r</span><span class="p">,</span><span class="n">s</span><span class="p">))</span><span class="o">.</span><span class="n">T</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">columns</span><span class="p">)</span>
 
-<span class="nb">print</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">sample</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span><span class="o">.</span><span class="n">to_markdown</span><span class="p">(</span><span class="n">tablefmt</span><span class="o">=</span><span class="s2">&quot;grid&quot;</span><span class="p">))</span>
+<span class="n">publish</span><span class="p">(</span><span class="n">df</span><span class="o">.</span><span class="n">head</span><span class="p">())</span>
 </code></pre></div>
-<pre><code>+-----+----------+---------+----------+-----------+--------+-----------+---------+
-|     |   q_year |   q_exp |   q_prop |   q_index |    bid |   reserve |   score |
-+=====+==========+=========+==========+===========+========+===========+=========+
-| 304 |        8 |      28 |       98 |     0.612 | 517.99 |   1425.57 |    0.63 |
-+-----+----------+---------+----------+-----------+--------+-----------+---------+
-|   9 |        3 |      24 |       83 |     0.482 | 500.25 |   1722.52 |    0.64 |
-+-----+----------+---------+----------+-----------+--------+-----------+---------+
-| 521 |        2 |      85 |       35 |     0.585 | 676.06 |   1930.63 |    0.63 |
-+-----+----------+---------+----------+-----------+--------+-----------+---------+
-| 148 |        1 |      23 |       70 |     0.405 | 263.9  |   1869.98 |    0.72 |
-+-----+----------+---------+----------+-----------+--------+-----------+---------+
-| 863 |        6 |      81 |       48 |     0.657 | 670.02 |   2131.73 |    0.68 |
-+-----+----------+---------+----------+-----------+--------+-----------+---------+
+<pre><code>+----+----------+---------+----------+-----------+--------+-----------+---------+
+|    |   q_year |   q_exp |   q_prop |   q_index |    bid |   reserve |   score |
++====+==========+=========+==========+===========+========+===========+=========+
+|  0 |        3 |      95 |       64 |     0.761 | 837.1  |   1651.44 |    0.57 |
++----+----------+---------+----------+-----------+--------+-----------+---------+
+|  1 |        5 |      54 |       13 |     0.372 | 376.98 |   1142.72 |    0.58 |
++----+----------+---------+----------+-----------+--------+-----------+---------+
+|  2 |        3 |      36 |       59 |     0.446 | 387.9  |   2011.87 |    0.7  |
++----+----------+---------+----------+-----------+--------+-----------+---------+
+|  3 |        8 |      74 |       65 |     0.71  | 606.07 |   1766.87 |    0.67 |
++----+----------+---------+----------+-----------+--------+-----------+---------+
+|  4 |        5 |      47 |       26 |     0.389 | 433.78 |   1342.48 |    0.59 |
++----+----------+---------+----------+-----------+--------+-----------+---------+
 </code></pre>
 <p>In the table above we have three underlying quality characteristics: <em>q_year</em> (years in the market), <em>q_exp</em> (experience), <em>q_prop</em> (proposition), that are weighted into a single quality index <em>q_index</em>. This index is then weighted against the discount, which is not present in the table explicitly. Note that you do not need to have access to all of the variables, some of them are clearly linearly dependent. Alternatively, you might not know the scoring rule, in which case you have to guess it from the data.</p>
 <p>Let's see how our simulated data is distributed:</p>
@@ -460,6 +460,10 @@ The theory of scoring auctions with <strong>sunk costs</strong>, other than <str
 <li>design prototype (same)</li>
 </ul>
 <p>belong on the spectrum between exogenous and endogenous, sunk and manipulable.</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
                 
               
               
