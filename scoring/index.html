@@ -223,6 +223,34 @@
 
   
   
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_2" type="checkbox" id="__nav_2" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_2">
+          Auctions
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Auctions" data-md-level="1">
+        <label class="md-nav__title" for="__nav_2">
+          <span class="md-nav__icon md-icon"></span>
+          Auctions
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
   
     <li class="md-nav__item">
       <a href="../classic/" class="md-nav__link">
@@ -231,11 +259,10 @@
     </li>
   
 
-    
-      
-      
-      
-
+            
+          
+            
+              
   
   
   
@@ -246,11 +273,10 @@
     </li>
   
 
-    
-      
-      
-      
-
+            
+          
+            
+              
   
   
     
@@ -367,6 +393,13 @@
   
 </nav>
       
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
     </li>
   
 
@@ -559,15 +592,15 @@
 <pre><code>+----+----------+---------+----------+-----------+--------+-----------+---------+
 |    |   q-year |   q-exp |   q-prop |   q-index |    bid |   reserve |   score |
 +====+==========+=========+==========+===========+========+===========+=========+
-|  0 |        4 |      79 |       18 |     0.507 | 650.28 |   1239.94 |    0.48 |
+|  0 |        1 |      14 |       71 |     0.364 | 385.85 |   1089.69 |    0.56 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  1 |        8 |      38 |       78 |     0.582 | 545.99 |   2071.59 |    0.69 |
+|  1 |        3 |      17 |        3 |     0.127 | 100    |   2041.19 |    0.7  |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  2 |        3 |      92 |       59 |     0.726 | 756.15 |   1279.75 |    0.5  |
+|  2 |        6 |      58 |       86 |     0.694 | 647.14 |   1502.2  |    0.61 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  3 |        8 |      35 |       49 |     0.451 | 537.11 |   1916.6  |    0.64 |
+|  3 |        9 |      96 |       48 |     0.762 | 899.92 |   1849.51 |    0.59 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  4 |        3 |      59 |       41 |     0.489 | 555.93 |   1536.95 |    0.59 |
+|  4 |        7 |      57 |        1 |     0.359 | 442.28 |   1183.47 |    0.55 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
 </code></pre>
 <p>In the table above we have three underlying quality characteristics: <em>q_year</em> (years in the market), <em>q_exp</em> (experience), <em>q_prop</em> (proposition), that are weighted into a single quality index <em>q_index</em>. This index is then weighted against the discount, which is not present in the table explicitly. Note that you do not need to have access to all of the variables, some of them are clearly linearly dependent. Alternatively, you might not know the scoring rule, in which case you have to guess it from the data.</p>
