@@ -231,8 +231,6 @@
       <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
       
       
-        
-      
       
         <label class="md-nav__link md-nav__link--active" for="__toc">
           Scoring Auctions
@@ -250,8 +248,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -260,16 +256,76 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#intro-scoring" class="md-nav__link">
+    Intro Scoring
+  </a>
+  
+    <nav class="md-nav" aria-label="Intro Scoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#goals" class="md-nav__link">
     Goals
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#assets" class="md-nav__link">
     Assets
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-ideas" class="md-nav__link">
+    General Ideas
+  </a>
+  
+    <nav class="md-nav" aria-label="General Ideas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scoring-rules" class="md-nav__link">
+    Scoring rules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nature-of-quality" class="md-nav__link">
+    Nature of quality
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linear-score" class="md-nav__link">
+    Linear score
+  </a>
+  
+    <nav class="md-nav" aria-label="Linear score">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-simple-model" class="md-nav__link">
+    A simple model
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -299,8 +355,6 @@
   
   
   
-    
-  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -309,16 +363,76 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#intro-scoring" class="md-nav__link">
+    Intro Scoring
+  </a>
+  
+    <nav class="md-nav" aria-label="Intro Scoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#goals" class="md-nav__link">
     Goals
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#assets" class="md-nav__link">
     Assets
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-ideas" class="md-nav__link">
+    General Ideas
+  </a>
+  
+    <nav class="md-nav" aria-label="General Ideas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scoring-rules" class="md-nav__link">
+    Scoring rules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nature-of-quality" class="md-nav__link">
+    Nature of quality
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#linear-score" class="md-nav__link">
+    Linear score
+  </a>
+  
+    <nav class="md-nav" aria-label="Linear score">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#a-simple-model" class="md-nav__link">
+    A simple model
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -339,19 +453,23 @@
                   </a>
                 
                 
-                <div class="highlight"><pre><span></span><code><span class="o">%</span><span class="n">run</span> <span class="o">../</span><span class="n">publish</span><span class="o">.</span><span class="n">py</span>
+                  <h1>Scoring Auctions</h1>
+                
+                <div class="highlight"><pre><span></span><code><span class="c1"># Scoring Auctions</span>
 </code></pre></div>
-<h1 id="intro-scoring">Intro Scoring</h1>
+<div class="highlight"><pre><span></span><code><span class="o">%</span><span class="n">run</span> <span class="o">../</span><span class="n">publish</span><span class="o">.</span><span class="n">py</span>
+</code></pre></div>
+<h2 id="intro-scoring">Intro Scoring</h2>
 <p>This chapter studies models devoted to <strong>scoring auctions</strong>, that is, auctions where both price and quality matter. Quality is an abstraction and can take multiple forms such as: experience, preference, social impact, green tech... the nature of it could be different. What matters is that the auctioneer values certain non-monetary outcomes of the auction.</p>
 <p>In classic auctions, the idea is that the high-value (in value auctions) or the low-cost (in procurement auctions) firm wins. In scoring auctions, the firm with the best combination of monetary and non-monetary characteristics wins.</p>
 <p>Scoring auctions are quite important in the context of procurement. Military, construction, educational and even catering contracts are typically allocated through some sort of a scoring auctions. And even when they are formally not, it still makes sense to model them as such. Yet, the theory of scoring auctions (as of 2021) is somewhat underdeveloped. </p>
-<h2 id="goals">Goals</h2>
+<h3 id="goals">Goals</h3>
 <p>The goal of this chapter is to:
 1. Introduce a taxonomy of scoring auctions
 2. Introduce a family of scoring auction models
 3. Characterize equilibria in these models
 4. Learn to model and compare auction outcomes</p>
-<h2 id="assets">Assets</h2>
+<h3 id="assets">Assets</h3>
 <p>There is a handful of papers on the topic
 1. <a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/che93.pdf">Design Competition Through Multidimensional Auctions, RAND, 1993</a>
 2. <a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/asker08.pdf">Properties of scoring auctions, RAND, 2008</a>
@@ -359,8 +477,8 @@
 4. <a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/my_diss.pdf">My dissertation, Chapter 1</a>
 5. <a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/handbook_procurement.pdf">Handbook of Procurement, Chapter 12</a>
 6. <a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/huang19.pdf">An empirical study of scoring auctions and quality manipulation corruption, EER, 2019</a></p>
-<h1 id="general-ideas">General Ideas</h1>
-<h2 id="scoring-rules">Scoring rules</h2>
+<h2 id="general-ideas">General Ideas</h2>
+<h3 id="scoring-rules">Scoring rules</h3>
 <p>We start with a loose definition of a scoring auction in a procurement environment</p>
 <div class="admonition warning">
 <p class="admonition-title">Definition</p>
@@ -426,13 +544,13 @@
 
 <span class="n">publish</span><span class="p">(</span><span class="n">fig</span><span class="p">)</span>
 </code></pre></div>
-<p><img alt="png" src="../scoring_files/scoring_6_0.png" /></p>
+<p><img alt="png" src="../scoring_files/scoring_7_0.png" /></p>
 <p>It is natural to expect that quality and discount should be negatively correlated as higher quality is associated with higher costs. However, in practice, the correlation can be actually positive due to strategic reasons (non-monotonicity of monopoly price in demand).</p>
 <div class="admonition danger">
 <p class="admonition-title">Danger</p>
 <p>The theory of <strong>interdependent scoring rules</strong> is very difficult.</p>
 </div>
-<h2 id="nature-of-quality">Nature of quality</h2>
+<h3 id="nature-of-quality">Nature of quality</h3>
 <p>The quality characteristics can be of different nature. For example, some of them could be completely <strong>exogenous</strong>, like the number of years firm has been operating on the market. These are ojective characteristics of the firm and can not be changed. An example of <strong>endogenous</strong> quality is when the firm submits the number of days needed to complete a certain construction project. The firm has complete freedom to claim any number of days: 30, 100, 300... but her associated costs would probably be higher as well. It is not always possible to say with complete certainty whether quality is exogenous or endogenous.</p>
 <p>Another problem is that quality is not always completely objective and therefore is subject to <strong>manipulation</strong> (i.e. corruption), see, for example, <a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/huang19.pdf">An empirical study of scoring auctions and quality manipulation corruption, EER, 2019</a>. When the risk of manipulation is low, it is possible to not commit to any particular evaluation criteria, or announce the criteria afted the proposals were submitted, so that the buyer has the last word. When the risk of manipulation is high, it makes more sense to commit to  strict and standardized evaluation criteria.</p>
 <div class="admonition quote">
@@ -453,8 +571,8 @@
 <li>design prototype (same)</li>
 </ul>
 <p>belong on the spectrum between exogenous and endogenous, sunk and manipulable.</p>
-<h1 id="linear-score">Linear score</h1>
-<h2 id="a-simple-model">A simple model</h2>
+<h2 id="linear-score">Linear score</h2>
+<h3 id="a-simple-model">A simple model</h3>
 <p>We start with a simplest model where quality is exogenous.</p>
 <p>:::{admonition} Model
 :class: important
@@ -466,6 +584,8 @@
 - the score is linear <span class="arithmatex">\(s = \alpha q + (r - b)\)</span>
 :::</p>
 <p>We wish to characterize a symmetric Bayes-Nash equilibrium, that is, our answer should be an equilibrium bidding strategy <span class="arithmatex">\(\beta(c, q)\)</span>.</p>
+<div class="highlight"><pre><span></span><code>
+</code></pre></div>
                 
               
               
