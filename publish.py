@@ -18,7 +18,7 @@ plt.rcParams.update({
 
 def publish(entry):
     if type(entry) == mpl.figure.Figure:
-        entry.set_size_inches(7, 7)
+        entry.set_size_inches(6, 6)
         entry.set_dpi(500)
         plt.tight_layout()
         
