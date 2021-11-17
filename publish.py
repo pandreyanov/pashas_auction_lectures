@@ -18,8 +18,8 @@ plt.rcParams.update({
 
 def publish(entry):
     if type(entry) == mpl.figure.Figure:
-        entry.set_size_inches(6, 8)
-        entry.set_dpi(500)
+        entry.set_size_inches(8, 8)
+        entry.set_dpi(600)
         plt.tight_layout()
         
     if type(entry) == pd.core.frame.DataFrame:
