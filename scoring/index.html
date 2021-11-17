@@ -543,15 +543,15 @@
 <pre><code>+----+----------+---------+----------+-----------+--------+-----------+---------+
 |    |   q-year |   q-exp |   q-prop |   q-index |    bid |   reserve |   score |
 +====+==========+=========+==========+===========+========+===========+=========+
-|  0 |        8 |      30 |       40 |     0.39  | 397.82 |   1147.5  |    0.57 |
+|  0 |        4 |      85 |       55 |     0.685 | 528.73 |   1912.28 |    0.71 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  1 |        4 |      37 |       97 |     0.613 | 677.72 |   1857.33 |    0.63 |
+|  1 |        8 |      85 |       40 |     0.665 | 920.69 |   1495.6  |    0.47 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  2 |        9 |      71 |       10 |     0.485 | 412.18 |   1916.9  |    0.69 |
+|  2 |        6 |      82 |       95 |     0.85  | 841.48 |   1353.69 |    0.52 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  3 |        1 |       5 |       98 |     0.427 | 390.63 |   1195.13 |    0.6  |
+|  3 |        3 |      70 |       20 |     0.46  | 526.5  |   1028.52 |    0.48 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  4 |        3 |      84 |        0 |     0.45  | 501.14 |   1938.56 |    0.65 |
+|  4 |        3 |      57 |       31 |     0.439 | 426.05 |   1825.03 |    0.67 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
 </code></pre>
 <p>In the table above we have three underlying quality characteristics: <em>q_year</em> (years in the market), <em>q_exp</em> (experience), <em>q_prop</em> (proposition), that are weighted into a single quality index <em>q_index</em>. This index is then weighted against the discount, which is not present in the table explicitly. Note that you do not need to have access to all of the variables, some of them are clearly linearly dependent. Alternatively, you might not know the scoring rule, in which case you have to guess it from the data.</p>
@@ -610,8 +610,6 @@
 <span class="o">%%</span><span class="n">bash</span> 
 <span class="n">cd</span> <span class="o">../</span><span class="p">;</span> <span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">markdown</span> <span class="n">docs</span><span class="o">/*.</span><span class="n">ipynb</span><span class="p">;</span> <span class="n">mkdocs</span> <span class="n">build</span><span class="p">;</span> <span class="n">mkdocs</span> <span class="n">gh</span><span class="o">-</span><span class="n">deploy</span>
 </code></pre></div>
-<div class="highlight"><pre><span></span><code>
-</code></pre></div>
                 
               
               
@@ -656,6 +654,11 @@
             Copyright &copy; 2021 - 2025 Pasha Andreyanov
           </div>
         
+        
+          Made with
+          <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+            Material for MkDocs
+          </a>
         
         
       </div>
