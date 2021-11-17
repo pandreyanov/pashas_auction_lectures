@@ -10,15 +10,15 @@ options_hist = {'color':'white', 'bins':25, 'edgecolor':'black'}
 plt.style.use('ggplot')
 sb.set_style('white')
 
-# plt.rcParams.update({
-#     "font.family": "serif",
-#     "font.serif": ["Palatino"],
-# })
+plt.rcParams.update({
+    "font.family": "serif",
+    "font.serif": ["Palatino"],
+})
 
 def publish(entry):
     if type(entry) == mpl.figure.Figure:
-        entry.set_size_inches(5, 6)
-        entry.set_dpi(300)
+        entry.set_size_inches(6, 8)
+        entry.set_dpi(500)
         plt.tight_layout()
         
     if type(entry) == pd.core.frame.DataFrame:
