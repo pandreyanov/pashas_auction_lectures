@@ -301,19 +301,72 @@
     Intro Scoring
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Intro Scoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#goals" class="md-nav__link">
     Goals
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#assets" class="md-nav__link">
     Assets
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-ideas" class="md-nav__link">
+    General Ideas
+  </a>
+  
+    <nav class="md-nav" aria-label="General Ideas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scoring-rules" class="md-nav__link">
+    Scoring rules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nature-of-quality" class="md-nav__link">
+    Nature of quality
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-models" class="md-nav__link">
+    Simple models
+  </a>
+  
+    <nav class="md-nav" aria-label="Simple models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linear-score" class="md-nav__link">
+    Linear score
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -357,19 +410,72 @@
     Intro Scoring
   </a>
   
-</li>
-      
-        <li class="md-nav__item">
+    <nav class="md-nav" aria-label="Intro Scoring">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
   <a href="#goals" class="md-nav__link">
     Goals
   </a>
   
 </li>
-      
-        <li class="md-nav__item">
+        
+          <li class="md-nav__item">
   <a href="#assets" class="md-nav__link">
     Assets
   </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#general-ideas" class="md-nav__link">
+    General Ideas
+  </a>
+  
+    <nav class="md-nav" aria-label="General Ideas">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#scoring-rules" class="md-nav__link">
+    Scoring rules
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#nature-of-quality" class="md-nav__link">
+    Nature of quality
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#simple-models" class="md-nav__link">
+    Simple models
+  </a>
+  
+    <nav class="md-nav" aria-label="Simple models">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#linear-score" class="md-nav__link">
+    Linear score
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
   
 </li>
       
@@ -397,7 +503,7 @@
 <p>This chapter studies models devoted to <strong>scoring auctions</strong>, that is, auctions where both price and quality matter. Quality is an abstraction and can take multiple forms such as: experience, preference, social impact, green tech... the nature of it could be different. What matters is that the auctioneer values certain non-monetary outcomes of the auction.</p>
 <p>In classic auctions, the idea is that the high-value (in value auctions) or the low-cost (in procurement auctions) firm wins. In scoring auctions, the firm with the best combination of monetary and non-monetary characteristics wins.</p>
 <p>Scoring auctions are quite important in the context of procurement. Military, construction, educational and even catering contracts are typically allocated through some sort of a scoring auctions. And even when they are formally not, it still makes sense to model them as such. Yet, the theory of scoring auctions (as of 2021) is somewhat underdeveloped. </p>
-<h2 id="goals">Goals</h2>
+<h3 id="goals">Goals</h3>
 <p>The goal of this chapter is to:</p>
 <ol>
 <li>Introduce a taxonomy of scoring auctions</li>
@@ -405,7 +511,7 @@
 <li>Characterize equilibria in these models</li>
 <li>Learn to model and compare auction outcomes</li>
 </ol>
-<h2 id="assets">Assets</h2>
+<h3 id="assets">Assets</h3>
 <p>There is a handful of papers on the topic</p>
 <ol>
 <li><a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/che93.pdf">Design Competition Through Multidimensional Auctions, RAND, 1993</a></li>
@@ -415,7 +521,7 @@
 <li><a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/handbook_procurement.pdf">Handbook of Procurement, Chapter 12</a></li>
 <li><a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/huang19.pdf">An empirical study of scoring auctions and quality manipulation corruption, EER, 2019</a></li>
 </ol>
-<h1 id="general-ideas">General Ideas</h1>
+<h2 id="general-ideas">General Ideas</h2>
 <h3 id="scoring-rules">Scoring rules</h3>
 <p>We start with a loose definition of a scoring auction in a procurement environment</p>
 <div class="admonition warning">
@@ -460,15 +566,15 @@
 <pre><code>+----+----------+---------+----------+-----------+--------+-----------+---------+
 |    |   q-year |   q-exp |   q-prop |   q-index |    bid |   reserve |   score |
 +====+==========+=========+==========+===========+========+===========+=========+
-|  0 |        6 |      14 |        5 |     0.15  | 100    |   1859.72 |    0.71 |
+|  0 |        3 |      84 |       81 |     0.774 | 732.75 |   1379.9  |    0.56 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  1 |        3 |      27 |       46 |     0.349 | 329.78 |   1374.58 |    0.64 |
+|  1 |        7 |      74 |       39 |     0.596 | 542.39 |   1189.57 |    0.56 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  2 |        3 |      51 |       24 |     0.381 | 400.21 |   1743.87 |    0.65 |
+|  2 |        9 |      67 |       25 |     0.525 | 557.07 |   1178.91 |    0.53 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  3 |        8 |      77 |       56 |     0.689 | 729.99 |   1962.68 |    0.65 |
+|  3 |        4 |      41 |       32 |     0.373 | 288.47 |   1737.86 |    0.7  |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
-|  4 |        6 |      65 |       39 |     0.541 | 473.58 |   1794.19 |    0.68 |
+|  4 |        2 |      65 |       33 |     0.477 | 473.54 |   1455.66 |    0.62 |
 +----+----------+---------+----------+-----------+--------+-----------+---------+
 </code></pre>
 <p>In the table above we have three underlying quality characteristics: <em>q_year</em> (years in the market), <em>q_exp</em> (experience), <em>q_prop</em> (proposition), that are weighted into a single quality index <em>q_index</em>. This index is then weighted against the discount, which is not present in the table explicitly. Note that you do not need to have access to all of the variables, some of them are clearly linearly dependent. Alternatively, you might not know the scoring rule, in which case you have to guess it from the data.</p>
@@ -488,7 +594,7 @@
 <p class="admonition-title">Danger</p>
 <p>The theory of <strong>interdependent scoring rules</strong> is very difficult.</p>
 </div>
-<h2 id="nature-of-quality">Nature of quality</h2>
+<h3 id="nature-of-quality">Nature of quality</h3>
 <p>The quality characteristics can be of different nature. For example, some of them could be completely <strong>exogenous</strong>, like the number of years firm has been operating on the market. These are ojective characteristics of the firm and can not be changed. An example of <strong>endogenous</strong> quality is when the firm submits the number of days needed to complete a certain construction project. The firm has complete freedom to claim any number of days: 30, 100, 300... but her associated costs would probably be higher as well. It is not always possible to say with complete certainty whether quality is exogenous or endogenous.</p>
 <p>Another problem is that quality is not always completely objective and therefore is subject to <strong>manipulation</strong> (i.e. corruption), see, for example, <a href="https://github.com/pandreyanov/grad_micro_lectures/blob/main/_assets/papers/scoring_auctions/huang19.pdf">An empirical study of scoring auctions and quality manipulation corruption, EER, 2019</a>. When the risk of manipulation is low, it is possible to not commit to any particular evaluation criteria, or announce the criteria afted the proposals were submitted, so that the buyer has the last word. When the risk of manipulation is high, it makes more sense to commit to  strict and standardized evaluation criteria.</p>
 <details class="quote"><summary>Read from Handbook of Procurement</summary><p>Detailed ex-ante specifications increase the predictability of procurement competition, minimizing risks of discretionary behaviour and abuses of the evaluating committee (e.g., corruption). This comes at the cost of losing some flexibility. Therefore, the buyer should carefully evaluate and compare case by case costs and benefits of both flexibility and predictability. When corruption is not a particular concern and participants can offer different valuable solutions for the good or service to be procured, it is more likely that benefits from flexibility prevail. In this case, there can be much to gain from ex-post evaluation. In contrast, if corruption during the evaluation process is a concern, ex-post flexibility should be minimized either by adopting an ex-ante BME (automatic scoring) or, in case this were not possible, by reducing the weight given to technical attributes.</p>
@@ -526,8 +632,6 @@
 <div class="highlight"><pre><span></span><code><span class="o">%%</span><span class="n">capture</span>
 <span class="o">%%</span><span class="n">bash</span>
 <span class="n">cd</span> <span class="o">../</span><span class="p">;</span> <span class="n">jupyter</span> <span class="n">nbconvert</span> <span class="o">--</span><span class="n">to</span> <span class="n">markdown</span> <span class="n">docs</span><span class="o">/*.</span><span class="n">ipynb</span><span class="p">;</span> <span class="n">mkdocs</span> <span class="n">build</span><span class="p">;</span> <span class="n">mkdocs</span> <span class="n">gh</span><span class="o">-</span><span class="n">deploy</span>
-</code></pre></div>
-<div class="highlight"><pre><span></span><code>
 </code></pre></div>
                 
               
