@@ -11,4 +11,6 @@ parts:
 - caption: Программа курса
   chapters:
     - file: week_0/books
+- caption: Первая неделя
+  chapters:
     - file: week_0/lecture_0
